@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Essential CSS Libraries for Wordpress Beirut Developers - Animate.css</title>
+
+        <!-- Stylesheets -->
+        <link rel="stylesheet" href="bower_components/animate.css/animate.min.css" media="screen">
+
+        <!-- style for create animate duration and delay -->
+        <style media="screen">
+            #hideMe {
+                animation-duration: 3s;
+                animation-delay: 5s;
+                animation-iteration-count: 2;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>A simple example of using Animate.css</h1>
+
+        <button type="button" name="button" class="animated bounceIn" id="btn">Click to animate Wordpress Beirut logo</button>
+
+        <p id="hideMe">
+            <img src="images/wpbeirut.png" /><br/>
+            Wordpress Beirut Logo that will be hidden after btn click.
+        </p>
+        <script src="bower_components/jquery/dist/jquery.min.js"></script>
+
+        <script type="text/javascript">
+            $( function() {
+                $( "#btn" ).on( "click", function() {
+                    // add the animate class with fadeout, also it will take the delay effect of the css since hideMe set the needed css animation by default.
+                    $( "#hideMe" ).addClass( "animated fadeOut" );
+                } );
+            });
+        </script>
+    </body>
+</html>
